@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "serve build",
+    "start": "serve",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
