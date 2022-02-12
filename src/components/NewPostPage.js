@@ -12,7 +12,7 @@ export function NewPostPage() {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        axios.get("https://whatjobrailsapi.herokuapp.com/api/categories").then((res) => setCategories(res.data));
+        axios.get("http://whatjobrailsapi.herokuapp.com/api/categories").then((res) => setCategories(res.data));
         setSelectedCategory(localStorage.getItem('selectedCategory'));
     }, []);
     function handleCategory(event) {
@@ -42,7 +42,7 @@ export function NewPostPage() {
         // console.log(event.target.expected_salary_range_from.value)
         var config = {
             method: 'post',
-            url: 'https://whatjobrailsapi.herokuapp.com/api/posts',
+            url: 'http://whatjobrailsapi.herokuapp.com/api/posts',
             headers: {
                 'Authorization': localStorage.getItem('user')
                 // ...data.getHeaders

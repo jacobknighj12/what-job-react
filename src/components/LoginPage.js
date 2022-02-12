@@ -10,7 +10,7 @@ function handleSubmit(event) {
 
     var config = {
         method: 'post',
-        url: 'https://whatjobrailsapi.herokuapp.com/api/users/sign_in',
+        url: 'http://whatjobrailsapi.herokuapp.com/api/users/sign_in',
 
         headers: {
         },

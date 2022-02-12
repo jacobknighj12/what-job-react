@@ -1,7 +1,7 @@
 require "uri"
 require "net/http"
 
-url = URI("https://whatjobrailsapi.herokuapp.com/api/users/sign_in")
+url = URI("http://whatjobrailsapi.herokuapp.com/api/users/sign_in")
 
 http = Net::HTTP.new(url.host, url.port);
 request = Net::HTTP::Post.new(url)

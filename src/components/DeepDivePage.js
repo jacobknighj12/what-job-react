@@ -15,7 +15,7 @@ export function DeepDivePage() {
   useEffect(() => {
     var config = {
       method: "get",
-      url: `https://whatjobrailsapi.herokuapp.com/api/posts/${post_id}`,
+      url: `http://whatjobrailsapi.herokuapp.com/api/posts/${post_id}`,
       headers: {},
     };
 

@@ -6,7 +6,7 @@ export function CategoriesPage() {
     const [selectedCategory, setSelectedCategory] = useState(1);
 
     useEffect(() => {
-        axios.get("https://whatjobrailsapi.herokuapp.com/api/categories").then((res) => setCategories(res.data));
+        axios.get("http://whatjobrailsapi.herokuapp.com/api/categories").then((res) => setCategories(res.data));
         console.log(localStorage.getItem('selectedCategory'));
         setSelectedCategory(localStorage.getItem('selectedCategory'));
         console.log(selectedCategory)

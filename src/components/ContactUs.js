@@ -25,7 +25,7 @@ export function ContactUs(props) {
 
     var config = {
       method: "post",
-      url: "https://whatjobrailsapi.herokuapp.com/api/contactmessage",
+      url: "http://whatjobrailsapi.herokuapp.com/api/contactmessage",
       headers: {},
       data: data,
     };
