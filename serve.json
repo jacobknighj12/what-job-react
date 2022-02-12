@@ -1,0 +1,44 @@
+{
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/Login",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/Signup",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/Categories",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/NewPost",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/Account",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/JobPosts",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/DeepDive",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/reportalert",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/ContactUs",
+            "destination": "/edit-project.html"
+        }
+    ]
+}
