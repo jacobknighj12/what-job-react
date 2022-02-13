@@ -6,12 +6,6 @@ export async function getContactMessages() {
   const response = await WhatJobRailsAPI.get("/api/contactmessage");
   console.log(response);
 }
-
-// export async function sendMessage() {
-//   const response = await WhatJobRailsAPI.post("/api/contactmessage", data);
-//   console.log(response.data);
-// }
-
 export function ContactUs(props) {
   const [values, setValues] = useState({
     name: "",
