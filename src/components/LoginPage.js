@@ -37,7 +37,7 @@ export function LoginPage() {
             <heading role="heading" className="heading">Login</heading>
             <div className='standard-form'>
             <form name="login-form" onSubmit={handleSubmit} className="login-signup">          
-                    <div className="standard-form">   
+                    
                     <label htmlFor="email">Email</label>
                     <input type='email' name='email'></input>
                     <label htmlFor="password">Password</label>
