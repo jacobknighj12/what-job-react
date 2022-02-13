@@ -154,3 +154,90 @@ describe("LoginPage", () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });
+
+describe("SignUp page", () => {
+  test("It should render a heading content correctly", () => {
+    render(<SignupPage />);
+    const heading = screen.getByRole("heading");
+    expect(heading).toBeInTheDocument();
+  });
+
+  test("login form should be in the document", () => {
+    const component = render(<SignupPage />);
+    const inputNode = component.getByText("Email");
+    expect(inputNode).toBeInTheDocument();
+  });
+  test("email field should  have label", () => {
+    const component = render(<SignupPage />);
+    const emailInputNode = component.getByLabelText("Email");
+    expect(emailInputNode.getAttribute("name")).toBe("email");
+    screen.debug(emailInputNode);
+  });
+  test("email input should accept text", () => {
+    const { getByLabelText } = render(<SignupPage />);
+    const emailInputNode = getByLabelText("Email");
+    expect(emailInputNode.value).toMatch("");
+    fireEvent.change(emailInputNode, { target: { value: "signupemail" } });
+    expect(emailInputNode.value).toMatch("signupemail");
+  });
+  test("first_name field should be in the document", () => {
+    const component = render(<SignupPage />);
+    const first_name = component.getByText("first_name");
+    expect(first_name).toBeInTheDocument();
+  });
+  test("first_name field should have label", () => {
+    const component = render(<SignupPage />);
+    const first_name = component.getByLabelText("first_name");
+    expect(first_name.getAttribute("name")).toBe("first_name");
+    screen.debug(first_name);
+  });
+  test("first_name input should accept text", () => {
+    const { getByLabelText } = render(<SignupPage />);
+    const first_name = getByLabelText("first_name");
+    expect(first_name.value).toMatch("");
+    fireEvent.change(first_name, { target: { value: "first_name" } });
+    expect(first_name.value).toMatch("first_name");
+  });
+  test("last_name field should be in the document", () => {
+    const component = render(<SignupPage />);
+    const last_name = component.getByText("last_name");
+    expect(last_name).toBeInTheDocument();
+  });
+  test("last_name field should have label", () => {
+    const component = render(<SignupPage />);
+    const last_name = component.getByLabelText("last_name");
+    expect(last_name.getAttribute("name")).toBe("last_name");
+    screen.debug(last_name);
+  });
+  test("last_name input should accept text", () => {
+    const { getByLabelText } = render(<SignupPage />);
+    const last_name = getByLabelText("last_name");
+    expect(last_name.value).toMatch("");
+    fireEvent.change(last_name, { target: { value: "last_name" } });
+    expect(last_name.value).toMatch("last_name");
+  });
+  test("password field should be in the document", () => {
+    const component = render(<SignupPage />);
+    const password = component.getByText("Password");
+    expect(password).toBeInTheDocument();
+  });
+  test("password field should have label", () => {
+    const component = render(<SignupPage />);
+    const password = component.getByLabelText("Password");
+    expect(password.getAttribute("name")).toBe("password");
+    screen.debug(password);
+  });
+  test("password input should accept text", () => {
+    const { getByLabelText } = render(<SignupPage />);
+    const password = getByLabelText("Password");
+    expect(password.value).toMatch("");
+    fireEvent.change(password, { target: { value: "testpassword" } });
+    expect(password.value).toMatch("testpassword");
+  });
+  test("calls onSubmit prop when clicked", () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Signup</Button>);
+    fireEvent.click(screen.getByText(/Signup/i));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
