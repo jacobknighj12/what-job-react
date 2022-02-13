@@ -58,18 +58,7 @@
     color: white;
   }
 
-  .introduction-buttons {
-    margin: 30px;
-    text-align: center;
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 18px;
-    justify-content: space-evenly;
-  }
-
-
-  .introduction button {
+  .introduction  {
     align-self: center;
     text-align: center;
     padding: 2px;
@@ -78,6 +67,17 @@
     border-radius: 18px;
     box-shadow: 10px 10px;
   }
+
+  .introduction-buttons button {
+    margin: 30px;
+    text-align: center;
+    padding: 2px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    border-radius: 18px;
+    /* justify-content: space-evenly; */
+  }
+
 
 /* standard-form */
 
