@@ -6,12 +6,6 @@ export async function getContactMessages() {
   const response = await WhatJobRailsAPI.get("/api/contactmessage");
   console.log(response);
 }
-
-// export async function sendMessage() {
-//   const response = await WhatJobRailsAPI.post("/api/contactmessage", data);
-//   console.log(response.data);
-// }
-
 export function ContactUs(props) {
   const [values, setValues] = useState({
     name: "",
@@ -25,7 +19,7 @@ export function ContactUs(props) {
 
     var config = {
       method: "post",
-      url: "http://localhost:3000/api/contactmessage",
+      url: "http://whatjobrailsapi.herokuapp.com/api/contactmessage",
       headers: {},
       data: data,
     };
@@ -62,29 +56,47 @@ export function ContactUs(props) {
 
   return (
     <>
-      <heading>Contact Us</heading>
-      <div className="standard-form">
-      <form onSubmit={handleSubmit}>
-        
-          <label name="name">Name</label>
-          <input name="name" value={values.name} onChange={handleNameChange} />
-          <label name="email">Email</label>
+      <form className="login-signup" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="Name" name="Name">
+            Name
+          </label>
           <input
-            name="email"
+            type="text"
+            id="Name"
+            name="Name"
+            value={values.name}
+            onChange={handleNameChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="Email" name="Email">
+            Email
+          </label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
             value={values.email}
             onChange={handleEmailChange}
           />
-          <label htmlFor="message">message</label>
+        </div>
+        <div>
+          <label htmlFor="Message" name="Message">
+            Message
+          </label>
           <textarea
-            id="message"
-            name="message"
+            type="message"
+            id="Message"
+            name="Message"
             value={values.message}
             onChange={handleMessageChange}
           />
+        </div>
+        <div>
           <button> Submit </button>
-        
-      </form >
-      </div>
+        </div>
+      </form>
     </>
   );
 }

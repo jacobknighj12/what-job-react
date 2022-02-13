@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from 'react'
-var axios = require('axios');
+import React, { useState, useEffect } from "react";
+var axios = require("axios");
 export function CategoriesPage() {
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(1);
@@ -51,4 +50,3 @@ export function CategoriesPage() {
             </div></>
        
     )
-}

@@ -15,7 +15,7 @@ export function DeepDivePage() {
   useEffect(() => {
     var config = {
       method: "get",
-      url: `http://localhost:3000/api/posts/${post_id}`,
+      url: `http://whatjobrailsapi.herokuapp.com/api/posts/${post_id}`,
       headers: {},
     };
 
@@ -57,39 +57,30 @@ export function DeepDivePage() {
   return (
     <>
       {posts.map((post) => (
-        <div class key={post.id}>
+        <div key={post.id}>
           {(() => {
-            // console.log("post.post_id");
-            // console.log(post.id);
-            // console.log("post_id");
-            // console.log(post_id);
             if (post.id === post_id) {
               return (
-                <div className='deep-dive'>
-                  
-                    <p/><heading>Deep Dive</heading>
+                <div>
+                  <div>
                     <h2>Deep dive on: {post.title}</h2>
-                  
-                  <p/><label>By:</label> 'user'{post.user_id}
-                  <p/><label>Job difficulty:</label> {post.difficulty}/10
-                  <p />
-                  <label>Expected salary range from</label> {post.expected_salary_range_from}{" "}
-                  <label>to</label> {post.expected_salary_range_to}
-                  
-                  <p/><label>Deep Dive:</label> {post.role_details}
+                  </div>
+                  <div>By : 'user'{post.user_id}</div>
+                  <div>Job difficulty: {post.difficulty}/10</div>
+                  <div>
+                    Expected salary range from {post.expected_salary_range_from}{" "}
+                    to {post.expected_salary_range_to}
+                  </div>
+                  <div>Deep Dive: {post.role_details}</div>
                   <hr></hr>
-                  <p/><label>Job Description:</label>{post.job_description}
-                  <p/><label>good post:</label> {post.upvotes}
-                  <p/><label>bad post:</label> {post.downvotes}
+                  <div>{post.job_description}</div>
+                  <div>good post: {post.upvotes}</div>
+                  <div>bad post: {post.downvotes}</div>
                   <button>
                     <a>Link to Original post</a>
                   </button>
-                  <p/> _
+                  <div> _</div>
                 </div>
-
-
-
-
               );
             }
           })()}
