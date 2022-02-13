@@ -11,6 +11,7 @@ import { AccountPage } from "./components/AccountPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { JobPosts } from "./components/JobPosts";
 import { DeepDivePage } from "./components/DeepDivePage";
+import { ReportAlert } from "./components/reportalert";
 function App() {
   // const [darkMode, setDarkMode] = useContext(false)
   // const [category, setCategory] = useContext(false)
@@ -28,6 +29,7 @@ function App() {
           <Route path="/Account" element={<AccountPage />} />
           <Route path="/JobPosts" element={<JobPosts />} />
           <Route path="/DeepDive" element={<DeepDivePage />} />
+          <Route path="/reportalert" element={<ReportAlert />} />
         </Routes>
       </Router>
     </div>
