@@ -7,7 +7,7 @@ export function ReportAlert() {
   const handleOnClick = (event) => {
     var config = {
       method: "get",
-      url: "http://localhost:3000/api/reportalert",
+      url: "http://whatjobrailsapi.herokuapp.com/api/reportalert",
       headers: {},
     };
 

@@ -1,3 +1,4 @@
+
   :root {
     color: white;
   }
@@ -432,400 +433,231 @@
     border-radius: 18px;
     box-shadow: 10px 10px;
   }
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+
+
+/* default is mobile */
+.nav{
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+.nav-logo{
+  grid-column: 1 / 2;
+  /* grid-template-rows: 1fr; */
+  padding: 5% 15% 0% 15%;
+  align-self: center;
+}
+
+.nav-buttons{
+  grid-column: 2 / 2;
+  padding: 10% 28% 0px 5%;
+  
+  /* grid-template-rows: 1fr; */
+}
+
+
+.nav button{
+  border: steelblue 10px;
+  margin: 5%;
+  width: 100%;
+  padding: 2px;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+}
+
+/* Page Heading */
+.heading {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+/* classess for the front page */
+.introduction {
+  text-align: center;
+  padding: 30px;
+}
+
+.introduction-buttons {
+  margin: 30px;
+  text-align: center;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  /* width: 50%; */
+  border-radius: 18px;
+  justify-content: space-evenly;
+}
+
+
+.introduction button {
+  align-self: center;
+  text-align: center;
+  padding: 2px;
+
+  width: 100px;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+}
+
+/* Login-signup */
+
+.login-signup form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 50px 0 50px;
+}
+
+.standard-form input {
+  margin: 10px;
+  grid-column: 1;
+  width: 90%;
+  padding: 2px;
+
+  border-radius: 18px;
+
+}
+
+.button-group {
+  /* display: flex;
+  flex-direction: row; */
+  grid-column: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.standard-form button {
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+
+}
+
+.login-signup label {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+  justify-self: center;
+}
+
+/* Tablet */
+@media screen and (min-width: 650px) and (max-width:1023px) {
+  .nav{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    height: 300px;
+  }
+  
+  
+  .nav-logo{
+    grid-column: 1 / 2;
+    padding: 5% 15% 0% 15%;
+    align-self: center;
+    height: 300px;
+  }
+  
+  .nav-buttons{
+    grid-column: 2 / 2;
+    padding: 9% 25% 0px 10%;   
+  }
+  
+  
+  .nav button{
+    border: steelblue 10px;
+    margin: 10px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    padding: 2px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  }
 
 
 
 /* signup and login form */
 
-  .standard-form form {
+  .login-signup form {
     display: grid;
     grid-template-columns: 200px 1fr;
     padding: 0 50px 0 50px;
   }
   
-  .standard-form input {
+  .login-signup input {
     margin: 10px;
     grid-column: 2 / 2;
+    /* /* margin: 30px; */
     width: 400px;
     padding: 2px;
+    /* width: 50%; */
     border-radius: 18px;
+    /* justify-content: space-evenly */
   }
   
   .button-group {
     display: flex;
     flex-direction: row;
     grid-column: 2;
-    }
- 
-  #signup-button-box {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-   padding: 0 50px 0 50px;
-  }
-  #signup-button {
-    grid-column: 2;
-    justify-self: left;
-    }
-
-
-  .standard-form button {
-    grid-column: 2 / 3;
-    margin: 10px;
-    text-align: center;
-    padding: 2px;
-    width: 200px;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: left;
+  
   }
   
-  .standard-form label {
+  .login-signup button {
+    margin: 10px;
+    align-self: center;
+    text-align: center;
+    padding: 2px;
+    
+    width: 150px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  
+  }
+  
+  .login-signup label {
     grid-column: 1 / 2;
+    color: white;
     display: flex;
     flex-direction: row;
     margin: 10px;
+    /* background-color: turquoise; */
     text-align: right;
     padding: 2px;
     justify-self: end;
     width: 100px;
-  }
-  .standard-form textarea {
-    margin: 10px;
-    grid-column: 2 / 3;
-    height: 150px;
-    width: 400px;
-    padding: 2px;
-    resize: none;
-    border-radius: 18px;
-}
-
-
-
-/* My Account */
-
-.my-account {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding: 0 100px;
-  }
-
-.my-account input {
-  grid-column: 1;
-  width: 90%;
-  padding: 2px;
-  grid-column: 1 / 2;
-  border-radius: 18px;
-}
-
-.edit-my-account
-{
-  text-align: center
-}
-
-#new-post a {
-  margin: 10px auto;
-}
-
-.edit-my-account button {
   
-  margin: 10px auto;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-content: center;
+  }
 }
 
-.my-account button {
-  grid-column: 2 / 3;
-  margin: 10px;
-  padding: 2px;
-  width: 80%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: center;
-}
-
-.my-account label {
-  grid-column: 1 / 2;
-  justify-self: right;
-  margin: 10px;
-  padding: 2px;
-}
-
-
-.my-account textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
-
-.my-account textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
-
-/* category select */
-.category-select {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  margin: 20px;
-  
-
-}
-.category-select button {
-  grid-column: 3;
-  margin: 10px;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: left;
-}
-.category-form-select {
-  position: relative;
-  grid-column: 2 / 3;
-}
-
-.category-form-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: white;
-}
-
-.category-select label {
-  grid-column: 1 / 2;
-  justify-self: right;
-  margin: 10px;
-  padding: 2px;
-}
-
-/* Jobs Posts Page */
-  .jobs-by-category {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 60px;  
-  }
-
-  .jobs-by-category h1 {
-    margin: 0 20px;
-    text-align: center;
-    font-size: 25px;
-    padding: 20px 0 10px 0;
-    font-weight: 700;
-  }
-  .jobs-by-category h2 {
-    margin: 0 20px;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px;
-    font-weight: 700;
-  }
-
-  .jobs-by-category button {  
-    margin: 10px;
-    padding: 2px;
-    width: 40%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: center;
-  }
-
-  .jobs-by-category label {
-    align-self: left;
-    text-align: left;
-    padding: 2px;
-    font-weight: 700;
-    width: 50%;
-  }
-
-  .jobs-by-category-border {
-    margin: 20px 100px;
-    padding-top: 30px;
-    border-radius: 18px;
-    border-color: white;
-    border: 3px solid white ;
-    box-shadow: 10px 10px black;
-  }
-
-  /* Jobs Posts Page */
-  .jobs-by-category {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 30px;
-  }
-
-  .jobs-by-category h1 {
-
-    margin: 0 20px;
-    text-align: center;
-    font-size: 25px;
-    padding: 20px 0 10px 0;
-    font-weight: 700;
-
-  }
-  .jobs-by-category h2 {
-    margin: 0 20px;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px;
-    font-weight: 700;
-  }
-
-  .jobs-by-category button {  
-    margin: 10px;
-    padding: 2px;
-    width: 40%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: center;
-  }
-
-  .jobs-by-category label {
-    align-self: left;
-    text-align: left;
-    padding: 2px;
-    font-weight: 700;
-    width: 50%;
-  }
-
-  .jobs-by-category-border {
-    margin: 20px;
-    padding-top: 30px;
-    border-radius: 18px;
-    border-color: white;
-    border: 3px solid white ;
-    box-shadow: 10px 10px black;
-  }
-
-/* New Posts Page   */
-  .new-post {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .new-post label {
-    grid-column: 1 / 2;
-    font-size: 20px;
-    font-weight:700;
-    padding: 15px;
-    text-align: center;
-    justify-self: center;
-  }
-  .new-post h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-    align-self: left;
-  }
-
-  .new-post button {
-    text-decoration: none;
-  }
-
-  .new-post-base {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-
-  }
-
-  .new-post-base button {
-    margin: 10px;
-    padding: 2px;
-    width: 40%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: center;
-  }
-
-  .new-post-base input {
-    margin: 10px;
-    grid-column: 1;
-    width: 90%;
-    padding: 2px;
-    border-radius: 18px;
-    grid-column: 2 / 3;
-  }
-  
-/* New Posts Page   */
-  .new-post {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .new-post label {
-    font-size: 20px;
-    font-weight:700;
-    padding: 15px;
-    text-align: center;
-  }
-  .new-post h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-    align-self: left;
-  }
-
-  .new-post button {
-    text-decoration: none;
-  }
-
-  .new-post-base button {
-    grid-column: 2 / 3;
-    margin: 10px;
-    padding: 2px;
-    width: 40%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: center;
-  }
-
-  .new-post-base input {
-    margin: 10px;
-    grid-column: 2 / 3;
-    width: 90%;
-    padding: 2px;
-    border-radius: 18px;
-    height: 30px;
-  }
-
-  .new-post-base label{
-    position: relative;
-    grid-column: 1 / 2;
-  }
-  .new-post-base label{
-    position: relative;
-    grid-column: 1 / 2;
-  }
-
- 
-  .new-post-base-select {
-    position: relative;
-    grid-column: 2 / 3;
-    height:30px;
-  }
-
-
-}
-/* Desktop*/
+/* Desktop - Still in beta */
 @media screen and (min-width: 1024px) {
   .nav{
     text-decoration: none;
     display: grid;
     grid-template-columns: 200px 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     align-content: center;
     grid-auto-flow: row;
   }
@@ -833,26 +665,33 @@
   
   .nav-logo{
     grid-column: 1 / 2;
+    /* grid-row: 1; */
     padding: 10% 15% 5% 15%;
     align-self: center;
-    }
+    /* justify-self: center; */
+  }
   
   .nav-buttons{
+    /* background-color: tomato; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    /* grid-column: 1fr 1fr 1fr 1fr; */
     padding: 55px 50px 0px 30px;   
   }
   
   
   .nav button{
     border: steelblue 10px;
+    /* margin: 5px; */
     padding: 15px;
     width: 120px;
     border-radius: 18px;
     box-shadow: 10px 10px;
-    }
+    /* align-self: center;
+    justify-self: center; */
+  }
 
   .introduction {
     text-align: center;
@@ -862,366 +701,80 @@
     padding: 0px 10% 0px 10%;
     margin: 30px;
     padding: 2px;
+    /* display: flex;
+    flex-direction: row; */
+    /* width: 50%; */
     display: grid;
     grid-template-columns: 1fr 1fr;   
     border-radius: 18px;
     column-gap: 30px;
-    }
+    /* justify-content: space-between; */
+    /* background-color: tomato; */
+    /* place-items: center; */
+    /* box-align: center;
+    align-items: center */
+  }
   
   
   .introduction button {
+
     padding: 2px;
+
     width: 100px;
     border-radius: 18px;
     box-shadow: 10px 10px;
   }
 /* signup and login form */
-  .standard-form form {
+  .login-signup form {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
     padding: 0 50px 0 50px;
   }
   
-  .standard-form input {
+  .login-signup input {
     margin: 10px;
-    grid-column: 2 / 3;
+    grid-column: 2 / 2;
+
     width: 400px;
     padding: 2px;
-    border-radius: 18px;
-  }
 
-  .standard-form button {
+    border-radius: 18px;
+
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
+  
+  }
+  
+  .login-signup button {
     margin: 10px;
     align-self: center;
     text-align: center;
     padding: 2px;
-    text-decoration: none;
-    width: 200px;
+    
+    width: 150px;
     border-radius: 18px;
     box-shadow: 10px 10px;
-    grid-column: 2 / 3;
-    justify-self: left;
+  
   }
   
-  .standard-form label {
+  .login-signup label {
     grid-column: 1 / 2;
+    color: white;
+    display: flex;
+    flex-direction: row;
     margin: 10px;
+    /* background-color: turquoise; */
+    text-align: right;
     padding: 2px;
-    justify-self: right;
+    justify-self: end;
     width: 100px;
-   }
-  .standard-form textarea {
-    margin: 10px;
-    grid-column: 2 / 3;
-    height: 150px;
-    width: 400px;
-    padding: 2px;
-    resize: none;
-    border-radius: 18px;
-  }
-
-  #signup-button-box {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    padding: 0 50px 0 50px;
-  }
   
-  #signup-button {
-    grid-column: 2;
-    justify-self: left;
   }
 
-
-
-
-/* My Account */
-
-  .my-account {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 25%;
-    }
-
-  .my-account input {
-    
-    grid-column: 1;
-    width: 90%;
-    padding: 2px;
-    grid-column: 1 / 2;
-    border-radius: 18px;
-
-  }
-
-  .edit-my-account
-  {
-    text-align: center
-  }
-
-  #new-post a {
-    
-    margin: 10px auto;
-    }
-
-  .edit-my-account button {
-    
-    margin: 10px auto;
-    padding: 2px;
-    width: 30%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-content: center;
-  }
-
-  .my-account button {
-    grid-column: 2 / 3;
-    margin: 10px;
-    padding: 2px;
-    width: 55%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: left;
-  }
-
-  .my-account label {
-    grid-column: 1 / 2;
-    justify-self: right;
-    margin: 10px;
-    padding: 2px;
-  }
-
-
-  .my-account textarea {
-    grid-column: 1;
-    margin: 10px;
-    height: 150px;
-    width: 90%;
-    padding: 2px;
-    resize: none;
-    border-radius: 18px;
-  }
-
-  .my-account textarea {
-    grid-column: 1;
-    margin: 10px;
-    height: 150px;
-    width: 90%;
-    padding: 2px;
-    resize: none;
-    border-radius: 18px;
-  }
-
-
-/* category select */
-.category-select {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 12px;
-  
-
-}
-.category-select button {
-  grid-column: 3;
-  margin: 10px;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: left;
-}
-.category-form-select {
-  position: relative;
-  grid-column: 2 / 3;
-}
-
-.category-form-select select {
-  display: none; 
-}
-
-.select-selected {
-  background-color: white;
 }
 
 
-.category-select label {
-  grid-column: 1 / 2;
-  justify-self: right;
-  margin: 10px;
-  padding: 2px;
-}
-
-
-/* Jobs Posts Page */
-  .jobs-by-category {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 5%;
-  }
-
-  .jobs-by-category h1 {
-
-    margin: 0 20px;
-    text-align: center;
-    font-size: 25px;
-    padding: 20px 0 10px 0;
-    font-weight: 700;
-
-  }
-  .jobs-by-category h2 {
-
-    margin: 0 20px;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px;
-    font-weight: 700;
-
-  }
-
-  .jobs-by-category button {
-    
-    margin: 10px;
-    padding: 2px;
-    width: 30%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-self: center;
-  }
-
-  .jobs-by-category label {
-    align-self: left;
-    text-align: left;
-    padding: 2px;
-    font-weight: 700;
-    width: 50%;
-
-  }
-
-  .jobs-by-category-border {
-    margin: 20px 20%;
-    padding-top: 30px;
-    border-radius: 18px;
-    border-color: white;
-    border: 3px solid white ;
-    box-shadow: 10px 10px black;
-  }
-
-
-
-/* New Posts Page   */
-.new-post {
-  margin: 40px
-}
-
-.new-post label {
-  font-size: 20px;
-  font-weight:700;
-  margin: 20px;
-}
-.new-post h2 {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.category-select jobs {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 20px; 
-}
-
-/* category select for New Posts Page */
-.category-select {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  margin: 12px;
-}
-.category-select button {
-  grid-column: 3;
-  margin: 10px;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: left;
-}
-.category-form-select {
-  position: relative;
-  grid-column: 2 / 3;
-}
-
-.category-form-select select {
-  display: none; 
-}
-
-.select-selected {
-  background-color: white;
-}
-
-
-.category-select label {
-  grid-column: 1 / 2;
-  color: white;
-
-  justify-self: right;
-  margin: 10px;
-
-}
-/* New Posts Page   */
-.new-post-base {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-}
-
-.new-post-base button {
-  grid-column: 2 / 3;
-  margin: 10px;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: center;
-}
-
-.new-post-base input {
-  margin: 10px 0;
-  grid-column: 2 / 3;
-  width: 40%;
-  padding: 2px;
-  border-radius: 18px;
-  height: 30px;
-}
-
-.new-post {
-  margin: 0 50px;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.new-post label {
-  font-size: 20px;
-  font-weight:700;
-  padding: 0;
-  text-align: center;
-}
-.new-post h2 {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  align-self: left;
-}
-
-.new-post-base label{
-  margin: 2px;
-  position: relative;
-  grid-column: 1 / 2;
-}
-
-
-.new-post-base-select {
-  position: relative;
-  grid-column: 2 / 3;
-  height:20px;
-  line-height: 80%;
-  margin-top: 40px;
-}
-
-}
