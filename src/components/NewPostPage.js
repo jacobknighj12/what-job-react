@@ -3,16 +3,16 @@ import MDEditor from "@uiw/react-md-editor";
 import rehypeSanitize from "rehype-sanitize";
 import axios from "axios";
 export function NewPostPage() {
-    const [intro, setIntro] = useState("Short introduction of yourself, how long you have worked in this role and an example of a great day and a bad day at your job.");
-    const [day_to_day, setDay_to_day] = useState("Explain both the boring and exciting parts of your job, detailing your typical day.");
-    const [career_path, setCareer_path] = useState("How did you get into your role; eg. study, luck, hardship, connections. As well as ways that you know that enable a person to enter this field today.");
-    const [industry_growth, setIndustry_growth] = useState("Whether your industry growing or shrinking, how hard it is to break into the industry, and whether there's anything happening in the industry that would impact on people trying to build a career within this industry.");
-    const [work_life_balance, setWork_life_balance] = useState("How much time do you have to yourself after work? Does your work require regular overtime or work outside of ordinary hours? Can you get time off easily? How long is an average day from when you wake to when you return home (including travel).");
+    const [intro, setIntro] = useState("Short introduction for yourself, how long you have worked in this position and an example of a great day and a bad day at your job.");
+    const [day_to_day, setDay_to_day] = useState("Go over the boring/exciting stuff that you often overlook but most of your days consist of");
+    const [career_path, setCareer_path] = useState("How did you get to this position, study, luck, hardship, Nepotism. As well as ways that you know that enable a person to enter this field today.");
+    const [industry_growth, setIndustry_growth] = useState("How fast is this industry growing, or is it shrinking? do they have good or bad entry into the industry due to new things happening?.");
+    const [work_life_balance, setWork_life_balance] = useState("how much time do you have to yourself after work? do you do extra hours constantly? do you have lots of overtime? can you get time off easily? how many hours from getting up till you get home is your average day? including travel.");
     const [selectedCategory, setSelectedCategory] = useState(1);
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
+        axios.get("http://whatjobrailsapi.herokuapp.com/api/categories").then((res) => setCategories(res.data));
         setSelectedCategory(localStorage.getItem('selectedCategory'));
     }, []);
     function handleCategory(event) {
@@ -42,7 +42,7 @@ export function NewPostPage() {
         // console.log(event.target.expected_salary_range_from.value)
         var config = {
             method: 'post',
-            url: 'http://localhost:3000/api/posts',
+            url: 'http://whatjobrailsapi.herokuapp.com/api/posts',
             headers: {
                 'Authorization': localStorage.getItem('user')
                 // ...data.getHeaders
@@ -60,35 +60,23 @@ export function NewPostPage() {
             });
     }
     return (
-        <div className="new-post">
+        <div>
 
-            <h2>New post</h2>
-
-
-            <form onSubmit={handleSubmit}>
-
-
-
-                
-                
-                
-                <div className="category-select"><label>Category</label><select class="category-select"  onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
+            <header>New post</header>
+            <form onSubmit={handleSubmit} className='login-signup'>
+                <label>Category</label>
+                <select onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
                     {categories.map((category) => (
                         <option key={category.id} value={category.id}>{category.name}</option>
                     ))
                     }
-                </select></div>
+                </select>
 
 
+                <label>Role title</label>
+                <input type='text' name='title'></input>
 
-
-
-
-                <p className="new-post-base"><label>Role title</label>
-                        
-                <input type='text' name='title'></input></p>
-                
-                <div><div className="container"><label>Intro</label>
+                <div className="container"><label>Intro</label>
                     <MDEditor
                         value={intro}
                         onChange={setIntro}
@@ -97,7 +85,7 @@ export function NewPostPage() {
                         }}
                     />
 
-                </div></div>
+                </div>
 
                 <label>Day to day</label>
 
@@ -150,18 +138,14 @@ export function NewPostPage() {
                     />
 
                 </div>
-                <div className="new-post-base">
-                <label>expected salary from</label>
+
+                <label>expected salary from $</label>
                 <input type='number' name='expected_salary_range_from'></input>
                 <label>to</label>
                 <input type='number' name='expected_salary_range_to'></input>
-                
-
-                <label>difficulty of the position</label>
-                
-                
-                
-                <select type='number' name='new-post-base'>
+                <br />
+                <label>difficulty of the position</label><br />
+                <select type='number' name='difficulty'>
 
                     <option value={1}>1/10</option>
                     <option value={2}>2/10</option>
@@ -173,8 +157,8 @@ export function NewPostPage() {
                     <option value={8} >8/10</option>
                     <option value={9} >9/10</option>
                     <option value={10} >10/10</option>
-                </select>
-                <button>publish</button></div>
+                </select><br />
+                <button >publish</button>
             </form>
         </div>
     )
