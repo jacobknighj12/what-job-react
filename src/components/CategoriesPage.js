@@ -5,17 +5,16 @@ export function CategoriesPage() {
     const [selectedCategory, setSelectedCategory] = useState(1);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
+        axios.get("http://whatjobrailsapi.herokuapp.com/api/categories").then((res) => setCategories(res.data));
         console.log(localStorage.getItem('selectedCategory'));
         setSelectedCategory(localStorage.getItem('selectedCategory'));
         console.log(selectedCategory)
     }, []);
     function handleChange(event) {
         event.preventDefault();
-        let newValue = event.target.value; //why does this work? I DONT UNDERSTAND WHY I DONT WANT TO KNOW WHY BUT IT ONLY WORKS IF NEW VALUE IS PASSED IN NOT EVENT.TARGET.VALUE
-        setSelectedCategory(newValue); //not setting to the target value
-        console.log(selectedCategory); //incorrect value
-        console.log(event.target.value); //correct value
+        let newValue = event.target.value; 
+        setSelectedCategory(newValue); 
+        
         localStorage.setItem('selectedCategory', newValue);
         console.log(localStorage.getItem('selectedCategory'));
     }
@@ -50,3 +49,4 @@ export function CategoriesPage() {
             </div></>
        
     )
+}
