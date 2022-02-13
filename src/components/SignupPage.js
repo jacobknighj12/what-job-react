@@ -35,9 +35,9 @@ export function SignupPage() {
       <heading role="heading" className="heading">
         Signup
       </heading>
-
+      
       <form onSubmit={handleSubmit}>
-        <div className="standard-form">
+      <div className="standard-form">
           <label htmlFor="email">Email</label>
           <input id="email" type="email" name="email"></input>
           <label htmlFor="first_name">first_name</label>
@@ -49,8 +49,9 @@ export function SignupPage() {
           <button role="signupButton">
             <a href="/Login">Signup</a>
           </button>
-        </div>
+          </div>
       </form>
+      
       <a href="/Login">
         <button>Login</button>
       </a>

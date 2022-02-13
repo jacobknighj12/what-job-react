@@ -2,14 +2,12 @@ import React from "react";
 export function HomePage() {
   return (
     <div>
-      {/* hero image will need a fetch call helper */}
-      {/* logo will be imported later */}
 
-      <div className="heading" htmlFor="whatJob?">
+      <heading className="heading" htmlFor="whatJob?">
         whatJob?
-      </div>
-      <div className="introduction">
-        <p>
+      </heading>
+      <div>
+        <p className="introduction">
           Our purpose is to provide career guidance for those in mainly high
           school education, but also for career changers. If you are a
           professional in any field please add your knowledge by signing up and
@@ -18,7 +16,7 @@ export function HomePage() {
           those that helped you!
         </p>
 
-        {/* will make these links later */}
+
         <div className="introduction-buttons">
           <a href="/Signup">
             <button>Sign up</button>

@@ -3,26 +3,19 @@ import React from "react";
 export function AccountPage(props) {
   return (
     <div>
-      <div className="MyPosts">
-        <a href="/NewPost">
-          <button>New Post</button>
-        </a>
-        {/* Api fetch call to get this users posts */}
-      </div>
-      <div className="MyDetails">
-        {/* Api fetch to get username, email, password with a check to see if dark mode is active? */}
-        <p>Username:</p>
-        <button>edit</button>
-        <p>Email:</p>
-        <button>edit</button>
-        <p>Password: ********</p>
-        <button>reveal</button>
-        <button>edit</button>
-        <button>delete account</button>
-        <p>Darkmode</p>
-        {/* value={props.darkMode} ? */}
-        <input type="checkbox"></input>
-      </div>
+            <heading>My Account</heading>
+<div className='edit-my-account' ><a href='/NewPost'>
+    <div><button >New Post</button></div>
+</a> </div>
+    <div className='my-account'>
+    <label>Username:</label><button>edit</button>
+    <label>Email:</label><button>edit</button>
+    <label>Password: ********</label>
+    <button>reveal</button>
+    </div>
+    <div className='edit-my-account'>
+    <button>edit</button>
+    <p /><button>delete account</button></div>
     </div>
   );
 }

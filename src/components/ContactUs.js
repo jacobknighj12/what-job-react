@@ -56,7 +56,8 @@ export function ContactUs(props) {
 
   return (
     <>
-      <form className="login-signup" onSubmit={handleSubmit}>
+      <div className="standard-form">
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="Name" name="Name">
             Name
@@ -97,6 +98,7 @@ export function ContactUs(props) {
           <button> Submit </button>
         </div>
       </form>
+      </div>
     </>
   );
 }

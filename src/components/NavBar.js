@@ -3,10 +3,8 @@ import { ReactComponent as Logo } from "./whatjob_logo.svg";
 export function NavBar() {
   return (
     <nav className="nav" role="navigation">
-      {/* Background image          */}
 
-      {/* <img src='' /> */}
-      <div className="nav-logo">
+<div className="nav-logo">
         <Logo />
       </div>
       <div className="nav-buttons">
