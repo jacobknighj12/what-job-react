@@ -29,27 +29,26 @@ function handleSubmit(event) {
     });
 }
 export function LoginPage() {
-  const [user, setUser] = useState();
+    const [user, setUser] = useState()
 
-  return (
-    <>
-      <heading role="heading" className="headings">
-        Login
-      </heading>
-      <form name="login-form" onSubmit={handleSubmit} className="login-signup">
-        <div className="standard-form">
-          <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email"></input>
-          <label htmlFor="password">Password</label>
-          <input id="password" type="current-password" name="password"></input>
-          <button role="loginButton">
-            <a href="/">Login</a>
-          </button>
-        </div>
-      </form>
-      <a href="/Signup">
-        <button>Signup</button>
-      </a>
-    </>
-  );
+    return (
+
+        <>
+            <heading role="heading" className="heading">Login</heading>
+            <div className='standard-form'>
+            <form name="login-form" onSubmit={handleSubmit} className="login-signup">          
+                    <div className="standard-form">   
+                    <label htmlFor="email">Email</label>
+                    <input type='email' name='email'></input>
+                    <label htmlFor="password">Password</label>
+                    <input id="password" type="current-password" name="password"></input>
+                    <button role="loginButton">
+                      <a href='/'>Login</a>
+                    </button>
+                </form>
+            <div id="signup-button-box"><a href='/Signup' id="signup-button">
+            <button >Signup</button></a></div></div>
+        </>
+
+    )
 }
