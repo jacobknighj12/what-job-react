@@ -10,7 +10,7 @@ function handleSubmit(event) {
 
     var config = {
         method: 'post',
-        url: 'http://whatjobrailsapi.herokuapp.com/api/users/sign_in',
+        url: 'http://localhost:3000/api/users/sign_in',
 
         headers: {
         },
@@ -37,18 +37,18 @@ export function LoginPage() {
     return (
 
         <>
-            <heading className="heading">Login</heading>
-            <form onSubmit={handleSubmit} classname='login-signup'>
-                <div className='standard-form'>
-                    <label>Email</label>
-                    <input type='email' name='email'></input>
-                    <label>Password</label>
-                    <input type='current-password' name='password'></input>
-                    <button><a href='/'>Login</a></button>
-                </div>
-            </form>
-            <a href='/Signup'>
-                <button>Signup</button></a>
+              <heading className="heading">Login</heading>
+              <div className='standard-form'>
+            <form onSubmit={handleSubmit}>
+                      
+                <label>Email</label>
+                <input type='email' name='email'></input>
+                <label>Password</label>
+                <input type='current-password' name='password'></input>
+                <button><a href='/'>Login</a></button>
+                </form>
+            <div id="signup-button-box"><a href='/Signup' id="signup-button">
+                <button >Signup</button></a></div></div>
         </>
 
     )
