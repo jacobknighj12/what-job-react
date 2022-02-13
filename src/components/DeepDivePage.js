@@ -59,10 +59,6 @@ export function DeepDivePage() {
       {posts.map((post) => (
         <div key={post.id}>
           {(() => {
-            // console.log("post.post_id");
-            // console.log(post.id);
-            // console.log("post_id");
-            // console.log(post_id);
             if (post.id === post_id) {
               return (
                 <div>
